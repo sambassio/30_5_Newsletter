@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrolling on the entire page */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling within the container */
+}
+
+.left, .right {
+    flex-basis: 50%; /* Each takes exactly half the width */
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents scrolling within each section */
+}
+
+.left {
+    background: url('assets/pp.png') no-repeat center center;
+    background-size: 100% auto; /* Replace x% with a percentage less than 100% */
+    background-position: center; /* Adjust as needed */
+}
+
+.right {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+input[type=email], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #556;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #667;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left, .right {
+        flex-basis: auto;
+        width: 100%;
+    }
+    .left {
+        order: 1; /* Image on top on small screens */
+    }
+    .right {
+        order: 2; /* Form/content below the image on small screens */
+    }
+}
+
