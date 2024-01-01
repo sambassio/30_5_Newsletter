@@ -33,10 +33,25 @@ body, html {
     color: white;
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Removed flex-grow and added margin for spacing */
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
 }
 
 input[type=email], button {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin-top: 20px;
     border: none;
@@ -70,3 +85,22 @@ button:hover {
     }
 }
 
+.twitter-follow-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px; /* Adjust this value to ensure button stays within the view */
+}
+
+.twitter-follow-button a {
+    text-decoration: none;
+    color: #1DA1F2; /* Twitter's brand color */
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.twitter-follow-button a:hover {
+    background-color: #E8F5FE; /* Lighter Twitter color for hover effect */
+}
